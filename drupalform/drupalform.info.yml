@@ -1,0 +1,5 @@
+name: "Drupal form example"
+description: "Create a basic drupal form, accessible form a route"
+type: module
+version: 1.0
+core: 8.x

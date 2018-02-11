@@ -1,0 +1,4 @@
+name: 'My module experimental'
+type: module
+description: 'Experimental my module'
+core: 8.x

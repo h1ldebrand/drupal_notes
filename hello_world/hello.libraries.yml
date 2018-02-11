@@ -1,0 +1,9 @@
+custom:
+  version: 1.x
+  css:
+    theme:
+      css/hello.css: {}
+  js:
+    js/hello.js: {}
+  dependencies:
+    - core/jquery

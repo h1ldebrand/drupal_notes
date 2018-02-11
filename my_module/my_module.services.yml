@@ -1,0 +1,5 @@
+services:
+  my_module.redirectmycontenttype:
+    class: Drupal\my_module\EventSubscriber\MyModuleRedirectSubscriber
+    tags:
+      - { name: event_subscriber }

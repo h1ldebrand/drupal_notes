@@ -1,0 +1,15 @@
+learn_route.content:
+  path: '<front>'
+  defaults:
+    _controller: '\Drupal\learn_route\Controller\ExampleController::content'
+  requirements:
+    _permission: 'access content'
+
+learn_route.pathname:
+  path: '/path'
+  defaults:
+    _controller: '\Drupal\learn_route\Controller\PathController::content'
+    _title: 'Hello'
+    param: "Hello people!"
+  requirements:
+    _permission: 'access content'

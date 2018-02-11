@@ -1,0 +1,9 @@
+<?php
+
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+//$language = Drupal::languageManager()->getLanguage('vi');
+$url = Url::fromRoute('<front>', [], ['impl']);
+$response = new RedirectResponse($url->toString());
+$response->send();

@@ -1,0 +1,13 @@
+<?php
+
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+function learn_route_preprocess_page(&$variables){
+
+    $url = Url::fromRoute('<front>', [], ['impl']);
+    return new RedirectResponse($url->toString());
+
+
+}
+

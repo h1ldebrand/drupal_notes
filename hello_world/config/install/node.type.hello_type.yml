@@ -1,0 +1,9 @@
+type: hello_type
+name: Hello
+description: 'Ето мой тип я пока незнаю зачем он нужен'
+help: ''
+new_revision: false
+display_submitted: true
+preview_mode: 1
+status: true
+langcode: ru

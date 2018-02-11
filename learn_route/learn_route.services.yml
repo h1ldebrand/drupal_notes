@@ -1,0 +1,5 @@
+services:
+  learn_route.route_subscriber:
+    class: Drupal\learn_route\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
