@@ -1,0 +1,4 @@
+name: "Dummy"
+description: "Тренировка работы с хуком theme"
+type: module
+core: 8.x

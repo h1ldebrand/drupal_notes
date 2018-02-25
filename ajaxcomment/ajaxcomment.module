@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Hooks for ajaxcomment module
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+
+function ajaxcomment_form_comment_form_alter(&$form, FormStateInterface $form_state, $form_id){
+    # Добавляем элемент куда будем выводить сообщения об ошибках или успешном
+    # отправлении формы.
+    $form['system_messages'] = [
+        '#markup' => '<div id="' . HTML::getClass($form_id) . '-messages"></div>',
+        '#weight' => -100,
+    ];
+    # Добавляем наш AJAX колбек для кнопки. Так как он находится в отдельном
+    # объекте, то указывать нужно полный путь с пространством имен.
+    $form['actions']['submit']['#ajax'] = [
+        'callback' => 'Drupal\ajaxcomment\AjaxCommentsSubmit::ajaxSubmitCallback',
+        'event' => 'click',
+        'progress'=> [
+            'type' => 'throbber',
+        ],
+
+    ];
+
+
+    $form['actions']['submit']['#ajax'][] = $form_state->cleanValues();
+}
+

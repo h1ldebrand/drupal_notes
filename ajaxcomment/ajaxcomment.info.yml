@@ -1,0 +1,4 @@
+name: "Ajax Submit form comment form"
+description: "I am training send comment form use ajax"
+type: module
+core: 8.x

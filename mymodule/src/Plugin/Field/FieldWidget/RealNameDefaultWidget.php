@@ -32,7 +32,7 @@ class RealNameDefaultWidget extends WidgetBase{
         $element['first_name'] = array(
             '#type' => 'textfield',
             '#title' => t('First name'),
-            '#default_value' => '',
+            '#default_value' => $items->getValue($include_computed = false)[0]['first_name'],
             '#size' => 25,
             '#required' => $element['#required'],
         );
@@ -40,7 +40,7 @@ class RealNameDefaultWidget extends WidgetBase{
         $element['last_name'] = array(
             '#type' => 'textfield',
             '#title' => t('Last name'),
-            '#default_value' => '',
+            '#default_value' => $items->getValue($include_computed = false)[0]['last_name'],
             '#size' => 25,
             '#required' => $element['#required'],
         );

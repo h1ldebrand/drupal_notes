@@ -1,0 +1,4 @@
+name: "Ajax form example"
+description: "I train doing form on Drupal using AJAX"
+type: module
+core: 8.x

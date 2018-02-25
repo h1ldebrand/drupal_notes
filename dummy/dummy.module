@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function dummy_theme($existing, $type, $theme, $path) {
+    return [
+        'dummy_example_first' => [
+            'variables' => [
+                'phone' => '(097)-510-18-59',
+                'email' => 'vdh1ldebrand@i.ua'
+            ],
+            'file'=>'dummy.theme.inc',
+        ],
+        // Данный пример будет использоваться для вывода содержимого в виде списка,
+        // а его препрцоесс мы венесем в отдельный файл.
+        'dummy_example_second' => [
+            'variables' => [
+                'list_type' => 'ul',
+                'items' => NULL,
+            ],
+            'file' => 'dummy.theme.inc',
+        ]
+    ];
+}

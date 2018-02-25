@@ -20,7 +20,7 @@ use Drupal\Core\TypedData\DataDefinition;
  *  description = @Translation("This field stores a first and last name."),
  *  category = @Translation("Custom"),
  *  default_widget = "realname_default",
- *  default_formatter = "string"
+ *  default_formatter = "realname_one_line"
  * )
  */
 
