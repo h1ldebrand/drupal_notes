@@ -1,5 +1,5 @@
 hello.content:
-  path: '/hello'
+  path: 'admin/config/hello'
   defaults:
     _controller: '\Drupal\hello_world\Controller\HelloController::content'
     _title: 'Hello World'

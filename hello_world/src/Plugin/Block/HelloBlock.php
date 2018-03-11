@@ -29,8 +29,20 @@ class HelloBlock extends BlockBase implements BlockPluginInterface{
         else {
             $name = $this->t('to no one');
         }
+
+        $html = '<div>
+                    <p>Здесь какойто параграф</p>
+                    <p>Здесь второй параграф</p>
+                </div>
+                <a href="javascript:void(0)">link</a>';
+
+
         return array(
-            '#markup' => $this->t('Hello @name!', array(
+            '#markup' => $this->t('<div>
+                    <p>@name</p>
+                    <p>Здесь второй параграф</p>
+                </div>
+                <a href="javascript:void(0)">link</a>', array(
                 '@name' => $name,
             )),
         );
@@ -66,7 +78,7 @@ class HelloBlock extends BlockBase implements BlockPluginInterface{
     public function blockSubmit($form, FormStateInterface $form_state) {
         parent::blockSubmit($form, $form_state);
         $values = $form_state->getValue('hello_block_name');
-        $this->configuration['hello_block_name'] = $values['hello_block_name'];
+        $this->configuration['hello_block_name'] = $values;
     }
 
     /**

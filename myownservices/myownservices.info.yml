@@ -1,0 +1,4 @@
+name: "My own services"
+description: "My own services"
+type: module
+core: 8.x

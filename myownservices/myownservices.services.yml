@@ -1,0 +1,13 @@
+parameters:
+  my_awesome_parameters:
+    awesome_key: 'awesome_value'
+    another_awesomeness: 1234567
+    deep_example:
+      first_level: true
+      second_level: ['wow', 'such flexible']
+services:
+  my_awesome_object:
+    class: Drupal\myownservices\AwesomeObject
+  my_tuned_object:
+    class: Drupal\myownservices\TunedObject
+    arguments: ['@my_awesome_object', '%my_awesome_parameters%']

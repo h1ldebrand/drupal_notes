@@ -12,14 +12,21 @@ use Drupal\Core\Form\FormStateInterface;
  */
 
 function mymodule_form_system_site_information_settings_alter(&$form, FormStateInterface $form_state){
-    $form['site_phone'] = array(
+    $form['company_info'] = array(
+      '#type' => 'details',
+      '#title' => 'Дополнительные настройки',
+      '#open' => true
+    );
+
+    $form['company_info']['site_phone'] = array(
         '#type' => 'tel',
         '#title' => t('Site phone'),
+        '#description' => 'Поле для телефона компании',
         '#default_value' => Drupal::config('system.site')->get('phone'),
     );
 
     $form['#submit'][] = 'mymodule_form_system_site_information_phone_submit';
-
+//    kint($form);
 }
 
 /**

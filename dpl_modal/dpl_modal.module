@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function dpl_modal_block_view_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block){
+
+    switch ($build["#id"]){
+        //#машинное имя блока
+        case 'modal_help':
+            $build['#attached']['library'][] = 'core/drupal.dialog.ajax';
+    }
+
+
+}
